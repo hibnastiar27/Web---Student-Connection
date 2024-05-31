@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- Font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+			rel="stylesheet" />
+		<!-- Akhir Font -->
+
+		<!-- Tailwind CSS -->
+		<script src="https://cdn.tailwindcss.com"></script>
+		<!-- Akhir Tailwind CSS -->
+
+		<!-- Icon -->
+		<script
+			src="https://kit.fontawesome.com/d7f673dfd5.js"
+			crossorigin="anonymous"></script>
+		<!-- Akhir Icon -->
+
+		<link rel="stylesheet" href="assets/css/global.css" />
+
+		<title>Roadmap</title>
+	</head>
+	<body>
+		<!-- NAVBAR -->
+		<nav class="border-b bg-white fixed w-full">
+			<div
+				class="flex px-5 sm:px-20 py-4 justify-between items-center text-neutral-700">
+				<h1 class="text-2xl font-bold">STUCO</h1>
+
+				<div class="gap-6 font-medium hidden md:flex">
+					<a
+						class="flex flex-col gap-1 group duration-300 transition-all"
+						href="beranda.html">
+						<p>Beranda</p>
+						<hr
+							class="w-0 border-white border-2 group-hover:border-orange-500 group-hover:w-full group-hover:transition-all transition-all group-hover:duration-300" />
+					</a>
+					<a
+						class="flex flex-col gap-1 group duration-300 transition-all"
+						href="kelas.html">
+						<div class="flex items-center gap-2">
+							<p>Kelas</p>
+							<svg
+								id="kelas_icon"
+								class=""
+								width="14"
+								height="9"
+								viewBox="0 0 14 9"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M1 1.5L7 7.5L13 1.5"
+									stroke="black"
+									stroke-width="1.5"
+									stroke-linecap="round"
+									stroke-linejoin="round" />
+							</svg>
+						</div>
+						<hr
+							class="w-0 border-white border-2 group-hover:border-orange-500 group-hover:w-full group-hover:transition-all transition-all group-hover:duration-300" />
+					</a>
+					<a
+						class="flex flex-col gap-1 group duration-300 transition-all text-orange-500"
+						href="roadmap.html">
+						<div class="flex items-center gap-2">
+							<p>Alur Belajar</p>
+							<svg
+								id="kelas_icon"
+								class=""
+								width="14"
+								height="9"
+								viewBox="0 0 14 9"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M1 1.5L7 7.5L13 1.5"
+									stroke="#f97316"
+									stroke-width="1.5"
+									stroke-linecap="round"
+									stroke-linejoin="round" />
+							</svg>
+						</div>
+						<hr
+							class="w-full border-orange-500 border-2 group-hover:border-orange-500 group-hover:w-full group-hover:transition-all transition-all group-hover:duration-300" />
+					</a>
+					<a
+						class="flex flex-col gap-1 group duration-300 transition-all"
+						href="mentoring.html">
+						<p>Mentoring</p>
+						<hr
+							class="w-0 border-white border-2 group-hover:border-orange-500 group-hover:w-full group-hover:transition-all transition-all group-hover:duration-300" />
+					</a>
+				</div>
+
+				<div class="flex items-center gap-4">
+					<button
+						class="hidden md:block bg-neutral-800 rounded-lg text-white px-6 py-2">
+						Login
+					</button>
+
+					<button class="md:hidden text-3xl">
+						<i
+							id="toggle"
+							class="fa-solid fa-bars transition-all duration-300"></i>
+					</button>
+				</div>
+			</div>
+
+			<div
+				id="dropdown"
+				class="hidden absolute right-4 top-20 flex flex-col bg-white border shadow-xl p-5 rounded-lg gap-5">
+				<a
+					class="flex flex-col gap-1 group duration-300 transition-all"
+					href="beranda.html">
+					<p>Beranda</p>
+				</a>
+				<a
+					class="flex flex-col gap-1 group duration-300 transition-all"
+					href="kelas.html">
+					<p>Kelas</p>
+				</a>
+				<a
+					class="flex flex-col gap-1 group duration-300 transition-all text-orange-500"
+					href="roadmap.html">
+					<p>Alur Belajar</p>
+				</a>
+				<a
+					class="flex flex-col gap-1 group duration-300 transition-all"
+					href="mentoring.html">
+					<p>Mentoring</p>
+				</a>
+			</div>
+		</nav>
+		<!-- AKHIR NAVBAR -->
+
+		<main class="sm:pt-20">
+			<div class="flex flex-col text-center sm:py-10 gap-4">
+				<h1 class="text-3xl font-semibold">
+					#RoadmapTo<span class="text-orange-500">Future</span>
+				</h1>
+				<p>
+					Mempelajari design dan code lebih terpercaya dengan <br />
+					mengikuti roadmap yang telah kami design
+				</p>
+			</div>
+
+			<div class="flex">
+				<div
+					class="flex gap-4 *:px-4 *:p-2 *:text-sm *:rounded-lg justify-center w-full">
+					<button id="role" class="roadmap active">Role based Roadmaps</button>
+					<button id="skill" class="roadmap">Skill based Roadmaps</button>
+					<button id="best" class="roadmap">Best Practices</button>
+				</div>
+			</div>
+
+			<!-- ALUR BELAJAR -->
+			<div class="sm:py-10 px-5 py-10 flex flex-col items-center gap-6">
+				<div
+					id="role-content"
+					class="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4 justify-center sm:px-20 w-full md:w-fit">
+					<div
+						class="flex flex-col rounded-xl bg-white shadow-xl p-4 gap-2 border border-neutral-100">
+						<div class="flex gap-2 items-center">
+							<img
+								class="rounded-xl w-[65px] h-[65px] object-cover"
+								src="assets/img/roadmap-01.png"
+								alt="" />
+							<div class="flex flex-col text-xs">
+								<h1 class="font-bold text-base">
+									Full-Stack JavaScript Developer
+								</h1>
+								<p class="text-neutral-500">Tersedia 14 Kelas</p>
+							</div>
+						</div>
+						<a
+							href="roadmap-detail.html"
+							class="text-center bg-black text-xs rounded-lg text-white py-3">
+							Start Journey
+						</a>
+					</div>
+					<div
+						class="flex flex-col rounded-xl bg-white shadow-xl p-4 gap-2 border border-neutral-100">
+						<div class="flex gap-2 items-center">
+							<img
+								class="rounded-xl w-[65px] h-[65px] object-cover"
+								src="assets/img/roadmap-02.png"
+								alt="" />
+							<div class="flex flex-col text-xs">
+								<h1 class="font-bold text-base">
+									No Code Webflow Website Developer
+								</h1>
+								<p class="text-neutral-500">Tersedia 14 Kelas</p>
+							</div>
+						</div>
+						<button class="bg-black text-xs rounded-lg text-white py-3">
+							Start Journey
+						</button>
+					</div>
+					<div
+						class="flex flex-col rounded-xl bg-white shadow-xl p-4 gap-2 border border-neutral-100">
+						<div class="flex gap-2 items-center">
+							<img
+								class="rounded-xl w-[65px] h-[65px] object-cover"
+								src="assets/img/roadmap-03.png"
+								alt="" />
+							<div class="flex flex-col text-xs">
+								<h1 class="font-bold text-base">UI/UX Designer</h1>
+								<p class="text-neutral-500">Tersedia 14 Kelas</p>
+							</div>
+						</div>
+						<button class="bg-black text-xs rounded-lg text-white py-3">
+							Start Journey
+						</button>
+					</div>
+					<div
+						class="flex flex-col rounded-xl bg-white shadow-xl p-4 gap-2 border border-neutral-100">
+						<div class="flex gap-2 items-center">
+							<img
+								class="rounded-xl w-[65px] h-[65px] object-cover"
+								src="assets/img/roadmap-04.png"
+								alt="" />
+							<div class="flex flex-col text-xs">
+								<h1 class="font-bold text-base">Mobile UI Designer</h1>
+								<p class="text-neutral-500">Tersedia 14 Kelas</p>
+							</div>
+						</div>
+						<button class="bg-black text-xs rounded-lg text-white py-3">
+							Start Journey
+						</button>
+					</div>
+				</div>
+
+				<div
+					id="skill-content"
+					class="hidden grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4 justify-center sm:px-20 w-full md:w-fit">
+					<div
+						class="flex flex-col rounded-xl bg-white shadow-xl p-4 gap-2 border border-neutral-100">
+						<div class="flex gap-2 items-center">
+							<img
+								class="rounded-xl w-[65px] h-[65px] object-cover"
+								src="assets/img/roadmap-05.png"
+								alt="" />
+							<div class="flex flex-col text-xs">
+								<h1 class="font-bold text-base">Skill Base</h1>
+								<p class="text-neutral-500">Tersedia 14 Kelas</p>
+							</div>
+						</div>
+						<button class="bg-black text-xs rounded-lg text-white py-3">
+							Start Journey
+						</button>
+					</div>
+					<div
+						class="flex flex-col rounded-xl bg-white shadow-xl p-4 gap-2 border border-neutral-100">
+						<div class="flex gap-2 items-center">
+							<img
+								class="rounded-xl w-[65px] h-[65px] object-cover"
+								src="assets/img/roadmap-06.png"
+								alt="" />
+							<div class="flex flex-col text-xs">
+								<h1 class="font-bold text-base">
+									Full-Stack JavaScript Developer
+								</h1>
+								<p class="text-neutral-500">Tersedia 14 Kelas</p>
+							</div>
+						</div>
+						<button class="bg-black text-xs rounded-lg text-white py-3">
+							Start Journey
+						</button>
+					</div>
+					<div
+						class="flex flex-col rounded-xl bg-white shadow-xl p-4 gap-2 border border-neutral-100">
+						<div class="flex gap-2 items-center">
+							<img
+								class="rounded-xl w-[65px] h-[65px] object-cover"
+								src="assets/img/roadmap-07.png"
+								alt="" />
+							<div class="flex flex-col text-xs">
+								<h1 class="font-bold text-base">
+									Full-Stack JavaScript Developer
+								</h1>
+								<p class="text-neutral-500">Tersedia 14 Kelas</p>
+							</div>
+						</div>
+						<button class="bg-black text-xs rounded-lg text-white py-3">
+							Start Journey
+						</button>
+					</div>
+					<div
+						class="flex flex-col rounded-xl bg-white shadow-xl p-4 gap-2 border border-neutral-100">
+						<div class="flex gap-2 items-center">
+							<img
+								class="rounded-xl w-[65px] h-[65px] object-cover"
+								src="assets/img/roadmap-08.png"
+								alt="" />
+							<div class="flex flex-col text-xs">
+								<h1 class="font-bold text-base">
+									Full-Stack JavaScript Developer
+								</h1>
+								<p class="text-neutral-500">Tersedia 14 Kelas</p>
+							</div>
+						</div>
+						<button class="bg-black text-xs rounded-lg text-white py-3">
+							Start Journey
+						</button>
+					</div>
+				</div>
+
+				<div
+					id="best-content"
+					class="hidden grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4 justify-center sm:px-20 w-full md:w-fit">
+					<div
+						class="flex flex-col rounded-xl bg-white shadow-xl p-4 gap-2 border border-neutral-100">
+						<div class="flex gap-2 items-center">
+							<img
+								class="rounded-xl w-[65px] h-[65px] object-cover"
+								src="assets/img/roadmap-05.png"
+								alt="" />
+							<div class="flex flex-col text-xs">
+								<h1 class="font-bold text-base">Best</h1>
+								<p class="text-neutral-500">Tersedia 14 Kelas</p>
+							</div>
+						</div>
+						<button class="bg-black text-xs rounded-lg text-white py-3">
+							Start Journey
+						</button>
+					</div>
+					<div
+						class="flex flex-col rounded-xl bg-white shadow-xl p-4 gap-2 border border-neutral-100">
+						<div class="flex gap-2 items-center">
+							<img
+								class="rounded-xl w-[65px] h-[65px] object-cover"
+								src="assets/img/roadmap-02.png"
+								alt="" />
+							<div class="flex flex-col text-xs">
+								<h1 class="font-bold text-base">
+									Full-Stack JavaScript Developer
+								</h1>
+								<p class="text-neutral-500">Tersedia 14 Kelas</p>
+							</div>
+						</div>
+						<button class="bg-black text-xs rounded-lg text-white py-3">
+							Start Journey
+						</button>
+					</div>
+					<div
+						class="flex flex-col rounded-xl bg-white shadow-xl p-4 gap-2 border border-neutral-100">
+						<div class="flex gap-2 items-center">
+							<img
+								class="rounded-xl w-[65px] h-[65px] object-cover"
+								src="assets/img/roadmap-04.png"
+								alt="" />
+							<div class="flex flex-col text-xs">
+								<h1 class="font-bold text-base">
+									Full-Stack JavaScript Developer
+								</h1>
+								<p class="text-neutral-500">Tersedia 14 Kelas</p>
+							</div>
+						</div>
+						<button class="bg-black text-xs rounded-lg text-white py-3">
+							Start Journey
+						</button>
+					</div>
+					<div
+						class="flex flex-col rounded-xl bg-white shadow-xl p-4 gap-2 border border-neutral-100">
+						<div class="flex gap-2 items-center">
+							<img
+								class="rounded-xl w-[65px] h-[65px] object-cover"
+								src="assets/img/roadmap-08.png"
+								alt="" />
+							<div class="flex flex-col text-xs">
+								<h1 class="font-bold text-base">
+									Full-Stack JavaScript Developer
+								</h1>
+								<p class="text-neutral-500">Tersedia 14 Kelas</p>
+							</div>
+						</div>
+						<button class="bg-black text-xs rounded-lg text-white py-3">
+							Start Journey
+						</button>
+					</div>
+				</div>
+			</div>
+			<!-- AKHIR ALUR BELAJAR -->
+		</main>
+
+		<!-- FOOTER -->
+		<footer class="bg-black text-white">
+			<div
+				class="flex flex-col sm:flex-row sm:justify-center sm:pt-20 gap-10 p-6">
+				<div class="flex flex-col gap-3">
+					<h1 class="font-bold text-xl mb-2">SUPORT</h1>
+					<a class="text-neutral-300" href="#">Help Center</a>
+					<a class="text-neutral-300" href="#">Privacy Policy</a>
+					<a class="text-neutral-300" href="#">FAQ</a>
+					<a class="text-neutral-300" href="#">Terms & Condition</a>
+					<a class="text-neutral-300" href="#">Community</a>
+				</div>
+
+				<div class="flex flex-col gap-3">
+					<h1 class="font-bold text-xl mb-2">SUPORT</h1>
+					<p class="text-neutral-300">JL Surga Menuju Indonesia Maju</p>
+					<p class="text-neutral-300">+62 (522) 999999999</p>
+					<p class="text-neutral-300">stuco@gmail.com</p>
+				</div>
+
+				<div class="flex flex-col gap-3">
+					<h1 class="font-bold text-xl mb-2">
+						Join Our Newsletter Community for Regular Inspiration
+					</h1>
+					<form class="flex text-sm w-full">
+						<input
+							class="rounded-l-lg p-4 w-full"
+							type="email"
+							placeholder="Your Email Address" />
+						<button class="px-3 rounded-r-lg bg-orange-500">Subscribe</button>
+					</form>
+				</div>
+			</div>
+
+			<hr class="border-neutral-700" />
+
+			<div class="p-5 sm:px-20 sm:py-5 text-neutral-500">
+				<h1>©2024 STUCO COPYRIGHT - All Rights Reserved</h1>
+			</div>
+		</footer>
+		<!-- AKHIR FOOTER -->
+
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="assets/js/navbar.js"></script>
+		<script src="assets/js/tab-roadmap.js"></script>
+	</body>
+</html>
